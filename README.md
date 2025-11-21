@@ -1,129 +1,147 @@
-The Minframe Dotfiles
 <div align="center">
 
-A keyboard-driven, GPU-accelerated, retro-industrial development environment.
+# 📟 THE MAINFRAME DOTFILES
+
+![Badge](https://img.shields.io/badge/OS-macOS-white?style=for-the-badge&logo=apple&logoColor=black)
+![Badge](https://img.shields.io/badge/Style-Retro_Industrial-fabd2f?style=for-the-badge)
+![Badge](https://img.shields.io/badge/Theme-Gruvbox_Hard-d65d0e?style=for-the-badge)
+![Badge](https://img.shields.io/badge/Font-IBM_3270-928374?style=for-the-badge)
+
+**A keyboard-driven, GPU-accelerated development environment for macOS.**
+<br>
+*High contrast. No mouse required. 1980s aesthetics with 2025 speed.*
+
+[View the Code](https://github.com/jennarbates/dotfiles) · [Report Bug](https://github.com/jennarbates/dotfiles/issues)
 
 </div>
 
-📸 The Aesthetics
-Terminal: Ghostty (GPU Accelerated)
+---
 
-Font: 3270 Nerd Font (IBM Mainframe Style)
 
-Theme: Gruvbox Dark Hard (High Contrast)
+## 📸 The Interface
 
-Window Manager: AeroSpace (Tiling with 15px Gaps)
+> **Note:** The setup features a tiling window manager with 15px gaps to showcase the procedurally generated noise wallpaper.
 
-Wallpaper: Procedurally generated noise (magick + osascript)
+## 🛠 The Tech Stack
 
-🛠 The Stack
-Component	Tool	Description
-Window Manager	AeroSpace	Tiling window manager for macOS (i3-style).
-Shell	Zsh + Starship	Custom "Blocky" prompt configuration.
-Editor	Neovim	LazyVim distribution with Gruvbox theme.
-File Manager	Yazi	Blazing fast terminal file manager with image previews.
-Navigation	Zoxide	Smarter cd command.
-Search	Fzf	Fuzzy finder for history and files.
-Extras	bat, eza, fastfetch	Modern replacements for cat, ls, and neofetch.
-🚀 Installation
-1. Prerequisites
+This setup replaces the standard macOS interface with a suite of high-performance CLI tools.
 
-You need Homebrew and the Nerd Font installed first.
+| Component | Tool | Why? |
+| :--- | :--- | :--- |
+| **Terminal** | [Ghostty](https://ghostty.org/) | GPU-accelerated, smooth rendering, shader support. |
+| **Windows** | [AeroSpace](https://github.com/nikitabobko/AeroSpace) | Tiling window manager (i3-style) for macOS. |
+| **Shell** | Zsh + [Starship](https://starship.rs/) | Minimalist, blocky prompt with Git status integration. |
+| **Editor** | [Neovim](https://neovim.io/) | (LazyVim) Full IDE features, faster than VS Code. |
+| **Files** | [Yazi](https://github.com/sxyazi/yazi) | Blazing fast terminal file manager with image previews. |
+| **Nav** | [Zoxide](https://github.com/ajeetdsouza/zoxide) | Smarter `cd` that learns your most visited folders. |
+| **Search** | [Fzf](https://github.com/junegunn/fzf) | Fuzzy finder for command history and files. |
 
-Bash
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+---
 
-# Install the 3270 Nerd Font
+## 🚀 Installation Guide
+
+### 1. Prerequisites
+You need **Homebrew** and the specific **Nerd Font** installed for the icons to render correctly.
+
+```bash
+# 1. Install Homebrew (if you haven't)
+/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+
+# 2. Install the IBM 3270 Nerd Font
 brew install --cask font-3270-nerd-font
-2. Install Packages
+```
 
-Install all the core tools in one go:
+### 2. Install Packages
+Download all the required tools in one go:
 
-Bash
+```bash
 brew install neovim ripgrep lazygit yazi ffmpeg sevenzip jq poppler fd fzf zoxide imagemagick fastfetch bat eza stow gh
 brew install --cask ghostty nikitabobko/tap/aerospace
-3. Clone & Stow
+```
 
-Clone this repository to your home folder and use GNU Stow to symlink the configurations.
+### 3. Clone & Apply
+We use **GNU Stow** to manage symlinks. This keeps your home directory clean and your configs organized in one repo.
 
-Bash
-# 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+```bash
+# 1. Clone this repository
+git clone [https://github.com/jennarbates/dotfiles.git](https://github.com/jennarbates/dotfiles.git) ~/dotfiles
 
-# 2. Enter the directory
+# 2. Enter the vault
 cd ~/dotfiles
 
-# 3. Stow (Link) the configs
-stow .
-🎮 Controls & Cheatsheet
-🪟 AeroSpace (Window Management)
+# 3. Link the configurations
+# We stow packages individually to ensure correct directory mapping
+stow ghostty aerospace nvim yazi starship zsh
+```
 
-Managed via Option (Alt) Key
+---
 
-Key Combo	Action
-Alt + Enter	Spawn new Terminal
-Alt + h/j/k/l	Focus Left / Down / Up / Right
-Alt + Shift + h/j/k/l	Move Window Left / Down / Up / Right
-Alt + f	Toggle Fullscreen
-Alt + /	Rotate Split (Vertical/Horizontal)
-Alt + Shift + 1-4	Move Window to Workspace 1-4
-📂 Yazi (File Manager)
+## 🎮 Controls & Cheatsheet
 
-Launch with command: y
+### 🪟 AeroSpace (Window Management)
+*Managed via `Option` (Alt) Key*
 
-Key	Action
-j / k	Navigation
-l / Enter	Open Folder or File
-h	Go Back (Parent Directory)
-Space	Select File
-q	Quit
-📝 Neovim (Editor)
+| Key Combo | Action |
+| :--- | :--- |
+| `Alt + Enter` | **Spawn new Terminal** |
+| `Alt + h/j/k/l` | Focus Left / Down / Up / Right |
+| `Alt + Shift + h/j/k/l` | Move Window Left / Down / Up / Right |
+| `Alt + f` | Toggle Fullscreen |
+| `Alt + /` | Rotate Split (Vertical/Horizontal) |
+| `Alt + Shift + 1-4` | Move Window to Workspace 1-4 |
 
-Launch with command: nvim
+### 📂 Yazi (File Manager)
+*Launch with command: `y`*
 
-Key	Action
-Space	Leader Key (Opens Menu)
-Space + e	Toggle File Explorer
-Space + f + f	Find File
-Space + /	Search in File
-:w	Save
-:q	Quit
-🐚 Shell Navigation
+| Key | Action |
+| :--- | :--- |
+| `j` / `k` | Navigation (Down/Up) |
+| `l` / `Enter` | Open Folder or File |
+| `h` | Go Back (Parent Directory) |
+| `Space` | Select File |
+| `a` | Create new file/folder |
+| `r` | Rename |
+| `q` | Quit |
 
-Command	Action
-z <name>	Jump to folder (e.g., z dot)
-Ctrl + R	Fuzzy Search History
-ll	List files with icons (eza)
-cat	Read file with highlighting (bat)
-🎨 Extras
-The Matrix Screensaver
+### 📝 Neovim (Editor)
+*Launch with command: `nvim`*
 
-If you leave the terminal idle for 600 seconds, cmatrix will auto-launch in bold mode. Press any key to return.
+| Key | Action |
+| :--- | :--- |
+| `Space` | **Leader Key** (Opens Menu) |
+| `Space + e` | Toggle File Explorer |
+| `Space + f + f` | Find File |
+| `Space + /` | Search text inside files |
+| `:w` | Save |
+| `:q` | Quit |
 
-Wallpaper Generation
+### 🐚 Shell Navigation
+| Command | Action |
+| :--- | :--- |
+| `z <name>` | Teleport to folder (e.g., `z dot` goes to dotfiles) |
+| `Ctrl + R` | Fuzzy Search History (Use `Ctrl+j/k` to select) |
+| `ll` | List files with icons (uses `eza`) |
+| `cat` | Read file with highlighting (uses `bat`) |
 
-To regenerate the custom noise background:
+---
 
-Bash
+## 🎨 Extras & Aesthetics
+
+### The Matrix Screensaver
+If you leave the terminal idle for **60 seconds**, `cmatrix` will auto-launch in bold mode to prevent burn-in (and look cool). Press any key to return.
+
+### Procedural Wallpaper
+The wallpaper is generated using **ImageMagick** to create a noise texture that matches the Gruvbox palette perfectly.
+
+To regenerate it:
+```bash
 magick -size 3840x2160 xc:'#1d2021' -attenuate 0.05 +noise Gaussian ~/.config/gruvbox-noise.png
+```
+
+---
+
 <div align="center">
 
-Built with high contrast and clicky keys.
-
-Folders you must NEVER commit ❌
-
-Never put these in your dotfiles repo:
-
-~/.ssh/ (Contains your private SSH keys. If you leak these, hackers can access your servers/GitHub).
-
-~/.gnupg/ (PGP keys).
-
-~/.aws/ (AWS credentials).
-
-
-To double check, use the grep -rE "key|token|password|secret|private" . | pbcopy command
+*Built with ❤️ and `h j k l`.*
 
 </div>
-
-
