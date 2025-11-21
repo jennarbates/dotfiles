@@ -1,29 +1,40 @@
-# --- VISUALS (The Meat & Potatoes) ---
-# Gruvbox pairs perfectly with the 3270 aesthetic.
-# It gives you that warm, vintage feel but with distinct colors for code.
-theme = Gruvbox Dark Hard
-#theme = mellow
-
-# --- FONT ---
+# --- FONT SETTINGS ---
 font-family = "3270 Nerd Font"
-# The 3270 font is naturally small, so we bump the size to make it readable
 font-size = 16
-# This thickens the font slightly to make it pop against the colored background
 font-thicken = true
 
-# --- RETRO WINDOW FEEL ---
-# Keep it opaque. Transparency ruins the "solid machine" feel of 3270.
-background-opacity = 1.0
+# --- WINDOW SETTINGS ---
+window-decoration = false
 window-padding-x = 20
 window-padding-y = 20
-window-decoration = false
+background-opacity = 1.0
 
-# --- CURSOR ---
-# A block cursor is non-negotiable for this look.
-# formatting: protects your block cursor from being changed by zsh
-shell-integration-features = no-cursor
+# --- CURSOR SETTINGS ---
 cursor-style = block
 cursor-style-blink = true
-# This is crucial: it ensures the character under the block changes color 
-# so you can read it.
 cursor-invert-fg-bg = true
+shell-integration-features = no-cursor
+
+# --- GRUVBOX DARK HARD (Manual Palette) ---
+background = #1d2021
+foreground = #ebdbb2
+selection-background = #ebdbb2
+selection-foreground = #1d2021
+
+# The Color Palette (16 colors)
+palette = 0=#1d2021
+palette = 8=#928374
+palette = 1=#cc241d
+palette = 9=#fb4934
+palette = 2=#98971a
+palette = 10=#b8bb26
+palette = 3=#d79921
+palette = 11=#fabd2f
+palette = 4=#458588
+palette = 12=#83a598
+palette = 5=#b16286
+palette = 13=#d3869b
+palette = 6=#689d6a
+palette = 14=#8ec07c
+palette = 7=#a89984
+palette = 15=#ebdbb2
