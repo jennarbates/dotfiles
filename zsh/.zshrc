@@ -1,3 +1,5 @@
+# Load secrets if the file exists
+[ -f ~/.zsh_secrets ] && source ~/.zsh_secrets
 
 # Force a blinking block cursor on startup
 echo -ne '\e[2 q'

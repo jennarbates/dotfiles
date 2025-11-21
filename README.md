@@ -111,4 +111,19 @@ magick -size 3840x2160 xc:'#1d2021' -attenuate 0.05 +noise Gaussian ~/.config/gr
 
 Built with high contrast and clicky keys.
 
+Folders you must NEVER commit ❌
+
+Never put these in your dotfiles repo:
+
+~/.ssh/ (Contains your private SSH keys. If you leak these, hackers can access your servers/GitHub).
+
+~/.gnupg/ (PGP keys).
+
+~/.aws/ (AWS credentials).
+
+
+To double check, use the grep -rE "key|token|password|secret|private" . | pbcopy command
+
 </div>
+
+
