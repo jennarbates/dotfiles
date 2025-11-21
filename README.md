@@ -35,6 +35,8 @@ This setup replaces the standard macOS interface with a suite of high-performanc
 | **Files** | [Yazi](https://github.com/sxyazi/yazi) | Blazing fast terminal file manager with image previews. |
 | **Nav** | [Zoxide](https://github.com/ajeetdsouza/zoxide) | Smarter `cd` that learns your most visited folders. |
 | **Search** | [Fzf](https://github.com/junegunn/fzf) | Fuzzy finder for command history and files. |
+| **Browser** | Qutebrowser | Keyboard-driven browser with Vim bindings. |
+| **Multiplexer** | Zellij | Persistent terminal workspaces (Rust-based). |
 
 ---
 
@@ -57,6 +59,7 @@ Download all the required tools in one go:
 ```bash
 brew install neovim ripgrep lazygit yazi ffmpeg sevenzip jq poppler fd fzf zoxide imagemagick fastfetch bat eza stow gh
 brew install --cask ghostty nikitabobko/tap/aerospace
+brew install --cask ghostty nikitabobko/tap/aerospace qutebrowser
 ```
 
 ### 3. Clone & Apply
@@ -123,12 +126,35 @@ stow ghostty aerospace nvim yazi starship zsh
 | `ll` | List files with icons (uses `eza`) |
 | `cat` | Read file with highlighting (uses `bat`) |
 
+### 🌐 Qutebrowser (Web Surfing)
+*Mouse-less browsing*
+
+| Key | Action |
+| :--- | :--- |
+| `f` | **Hint Mode** (Show keys to click links) |
+| `o` | Open URL or Search |
+| `d` | Close Tab |
+| `u` | Undo Close Tab |
+| `J` / `K` | Next / Previous Tab |
+| `H` / `L` | Go Back / Forward in History |
+
+### 🧩 Zellij (Multiplexer)
+*Keeps sessions alive.*
+
+| Key | Action |
+| :--- | :--- |
+| `Ctrl` + `t` | New Tab |
+| `Ctrl` + `h`/`j`/`k`/`l` | Move Focus |
+| `Ctrl` + `d` | Detach Session (Background it) |
+
 ---
 
 ## 🎨 Extras & Aesthetics
 
 ### The Matrix Screensaver
 If you leave the terminal idle for **60 seconds**, `cmatrix` will auto-launch in bold mode to prevent burn-in (and look cool). Press any key to return.
+
+* **Browser:** Qutebrowser (Vim-based Web Surfing)
 
 ### Procedural Wallpaper
 The wallpaper is generated using **ImageMagick** to create a noise texture that matches the Gruvbox palette perfectly.

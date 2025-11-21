@@ -1,0 +1,36 @@
+// ~/dotfiles/zellij/.config/zellij/config.kdl
+
+theme "gruvbox-dark"
+default_layout "compact"
+mouse_mode true
+
+// Copy to clipboard automatically on selection
+copy_command "pbcopy"
+
+// Keybindings
+keybinds {
+    normal {
+        // Unbind Ctrl+q so it doesn't quit accidentially
+        unbind "Ctrl q"
+
+        // Ctrl+t to create new tabs (easier than default)
+        bind "Ctrl t" { NewTab; }
+
+        // Ctrl+w to close pane
+        bind "Ctrl w" { CloseFocus; }
+
+        // Navigation (Alt + arrow is already AeroSpace, so use Ctrl + hjkl)
+        bind "Ctrl h" { MoveFocus "Left"; }
+        bind "Ctrl l" { MoveFocus "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+    }
+}
+
+// UI Customization
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
