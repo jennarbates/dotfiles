@@ -1,0 +1,63 @@
+# --- GRUVBOX DARK HARD (Direct Injection) ---
+
+[mgr]
+cwd = { fg = "#fabd2f" }
+
+# Hovered
+hovered         = { fg = "#282828", bg = "#fabd2f" }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#b8bb26", italic = true }
+find_position = { fg = "#fe8019", bg = "reset", italic = true }
+
+# Marker
+marker_copied   = { fg = "#b8bb26", bg = "#b8bb26" }
+marker_cut      = { fg = "#fb4934", bg = "#fb4934" }
+marker_selected = { fg = "#83a598", bg = "#83a598" }
+
+# Tab
+tab_active   = { fg = "#282828", bg = "#fabd2f" }
+tab_inactive = { fg = "#a89984", bg = "#504945" }
+tab_width    = 1
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#665c54" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#665c54", bg = "#665c54" }
+
+# Mode
+mode_normal = { fg = "#282828", bg = "#fabd2f", bold = true }
+mode_select = { fg = "#282828", bg = "#b8bb26", bold = true }
+mode_unset  = { fg = "#282828", bg = "#d3869b", bold = true }
+
+# Progress
+progress_label  = { fg = "#ebdbb2", bold = true }
+progress_normal = { fg = "#458588", bg = "#282828" }
+progress_error  = { fg = "#fb4934", bg = "#282828" }
+
+# Permissions
+permissions_t = { fg = "#458588" }
+permissions_r = { fg = "#fabd2f" }
+permissions_w = { fg = "#fb4934" }
+permissions_x = { fg = "#b8bb26" }
+permissions_s = { fg = "#665c54" }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#83a598" },
+	{ mime = "video/*", fg = "#d3869b" },
+	{ mime = "audio/*", fg = "#d3869b" },
+	{ mime = "application/zip", fg = "#d3869b" },
+	{ mime = "application/gzip", fg = "#d3869b" },
+	{ mime = "application/x-tar", fg = "#d3869b" },
+	{ mime = "application/x-bzip", fg = "#d3869b" },
+	{ mime = "application/x-bzip2", fg = "#d3869b" },
+	{ mime = "application/x-7z-compressed", fg = "#d3869b" },
+	{ mime = "application/x-rar", fg = "#d3869b" },
+	{ name = "*", fg = "#ebdbb2" }
+]

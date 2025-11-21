@@ -1,0 +1,29 @@
+# --- VISUALS (The Meat & Potatoes) ---
+# Gruvbox pairs perfectly with the 3270 aesthetic.
+# It gives you that warm, vintage feel but with distinct colors for code.
+theme = Gruvbox Dark Hard
+#theme = mellow
+
+# --- FONT ---
+font-family = "3270 Nerd Font"
+# The 3270 font is naturally small, so we bump the size to make it readable
+font-size = 16
+# This thickens the font slightly to make it pop against the colored background
+font-thicken = true
+
+# --- RETRO WINDOW FEEL ---
+# Keep it opaque. Transparency ruins the "solid machine" feel of 3270.
+background-opacity = 1.0
+window-padding-x = 20
+window-padding-y = 20
+window-decoration = false
+
+# --- CURSOR ---
+# A block cursor is non-negotiable for this look.
+# formatting: protects your block cursor from being changed by zsh
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = true
+# This is crucial: it ensures the character under the block changes color 
+# so you can read it.
+cursor-invert-fg-bg = true

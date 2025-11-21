@@ -1,0 +1,31 @@
+# Use a blocky format that fits the 3270 grid
+format = """
+[┌───────────────────](bold bright-black)
+[│](bold bright-black) $directory$git_branch$git_status
+[└─>](bold bright-black) """
+
+# Move the rest of the stuff to the right side
+right_format = """$cmd_duration$character"""
+
+[directory]
+style = "bold yellow"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "GIT:"
+style = "bold green"
+format = " via [$symbol $branch]($style)"
+
+[git_status]
+style = "bold red"
+format = " [$all_status$ahead_behind]($style)"
+
+[cmd_duration]
+min_time = 500
+format = "[$duration](bold bright-black)"
+
+[character]
+success_symbol = "[ █](bold green)"
+error_symbol = "[ █](bold red)"
