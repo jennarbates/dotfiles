@@ -1,0 +1,36 @@
+/* Custom CSS for a true Text-Based Terminal Look */
+
+/* Set body background to the Gruvbox hard background color */
+body {
+    background-color: #1d2021 !important; /* bg0_hard */
+    color: #ebdbb2 !important;            /* fg */
+    font-family: '3270 Nerd Font', monospace !important;
+    font-size: 14pt !important;
+}
+
+/* Set link colors to a terminal-appropriate aqua */
+a, a:link, a:visited {
+    color: #689d6a !important; /* aqua */
+    text-decoration: none !important; /* Remove underlines */
+}
+
+/* Style for text input fields (search, login forms) */
+input[type="text"], textarea, input:not([type]), select {
+    background-color: #3c3836 !important; /* bg1 */
+    color: #ebdbb2 !important;            /* fg */
+    border: 1px solid #458588 !important; /* blue border */
+}
+
+/* Override modern UI elements to look flat and text-based */
+*, *:before, *:after {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background-image: none !important;
+    /* Remove all visual fluff */
+}
+
+/* Blockquotes, quotes, and preformatted text */
+blockquote, pre {
+    border-left: 2px solid #98971a !important; /* green border */
+    background-color: #1d2021 !important;
+}

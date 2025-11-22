@@ -16,6 +16,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
+    import = "lazyvim.plugins.extras",
+    opts = {
+      -- Your existing extras are listed here:
+      -- Example:
+      -- { "lang.python" },
+      -- { "coding.yanky" },
+
+      -- **Add the Typst extra here:**
+      { "lang.typst" },
+    },
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
