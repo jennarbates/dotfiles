@@ -1,5 +1,4 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$PATH:$HOME/.cargo/bin"
 # Load secrets if the file exists
 [ -f ~/.zsh_secrets ] && source ~/.zsh_secrets
 
@@ -47,4 +46,6 @@ function y() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$PATH:$HOME/.cargo/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
