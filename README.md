@@ -37,7 +37,8 @@ This setup replaces the standard macOS interface with a suite of high-performanc
 | **Search** | [Fzf](https://github.com/junegunn/fzf) | Fuzzy finder for command history and files. |
 | **Browser** | Qutebrowser | Keyboard-driven browser with Vim bindings. |
 | **Multiplexer** | Zellij | Persistent terminal workspaces (Rust-based). |
-
+| **Email** | [Aerc](https://aerc-mail.org/) | Efficient terminal email client with vim-style bindings. |
+| **Web** | [Elinks](http://elinks.or.cz/) | Advanced text-mode web browser. |
 ---
 
 ## 🚀 Installation Guide
@@ -57,7 +58,7 @@ brew install --cask font-3270-nerd-font
 Download all the required tools in one go:
 
 ```bash
-brew install neovim ripgrep lazygit yazi ffmpeg sevenzip jq poppler fd fzf zoxide imagemagick fastfetch bat eza stow gh
+brew install neovim ripgrep lazygit yazi aerc elinks zellij ffmpeg sevenzip jq poppler fd fzf zoxide imagemagick fastfetch bat eza stow gh
 brew install --cask ghostty nikitabobko/tap/aerospace
 brew install --cask ghostty nikitabobko/tap/aerospace qutebrowser
 ```
@@ -74,8 +75,7 @@ cd ~/dotfiles
 
 # 3. Link the configurations
 # We stow packages individually to ensure correct directory mapping
-stow ghostty aerospace nvim yazi starship zsh
-```
+stow ghostty aerospace nvim yazi starship zsh aerc elinks qutebrowser zellij```
 
 ---
 
