@@ -39,11 +39,13 @@ This setup replaces the standard macOS interface with a suite of high-performanc
 ### 1. Prerequisites
 You need **Homebrew** and the specific **Nerd Font** installed for the icons to render correctly.
 
-```bash
-# 1. Install Homebrew (if you haven't)
-/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
 
+# 1. Install Homebrew (if you haven't)
+```bash
+/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+```
 # 2. Install the IBM 3270 Nerd Font
+```bash
 brew install --cask font-3270-nerd-font
 ```
 
@@ -58,16 +60,20 @@ brew install --cask ghostty nikitabobko/tap/aerospace qutebrowser
 ### 3. Clone & Apply
 We use **GNU Stow** to manage symlinks. This keeps your home directory clean and your configs organized in one repo.
 
-```bash
 # 1. Clone this repository
+```bash
 git clone [https://github.com/jennarbates/dotfiles.git](https://github.com/jennarbates/dotfiles.git) ~/dotfiles
+```
 
 # 2. Enter the vault
+```bash
 cd ~/dotfiles
-
+```
 # 3. Link the configurations
 # We stow packages individually to ensure correct directory mapping
-stow ghostty aerospace nvim yazi starship zsh aerc elinks qutebrowser zellij```
+```bash
+stow ghostty aerospace nvim yazi starship zsh aerc elinks qutebrowser zellij
+```
 
 ---
 
@@ -148,7 +154,7 @@ stow ghostty aerospace nvim yazi starship zsh aerc elinks qutebrowser zellij```
 ## 🎨 Extras & Aesthetics
 
 ### The Matrix Screensaver
-If you leave the terminal idle for **60 seconds**, `cmatrix` will auto-launch in bold mode to prevent burn-in (and look cool). Press any key to return.
+If you leave the terminal idle for **600 seconds**, `cmatrix` will auto-launch in bold mode to prevent burn-in (and look cool). Press any key to return.
 
 * **Browser:** Qutebrowser (Vim-based Web Surfing)
 
