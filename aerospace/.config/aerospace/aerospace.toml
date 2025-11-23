@@ -2,6 +2,7 @@
 
 # --- BASIC SETTINGS ---
 # (Top level settings must go before [tables])
+start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 30
@@ -15,34 +16,47 @@ outer.bottom =     15
 outer.top =        15
 outer.right =      15
 
-# --- KEYBINDINGS (Alt + Vim Keys) ---
+# --- KEYBINDINGS (Vim Centric) ---
 [mode.main.binding]
 
-# 1. Launch Terminals
+# 1. Launch Terminal
 alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
-# 2. Move Focus
+# 2. Close Window (d for delete)
+alt-d = 'close'
+
+# 3. Move Focus
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
-# 3. Move Windows
-alt-shift-h = 'move-node-to-workspace left'
-alt-shift-j = 'move-node-to-workspace down'
-alt-shift-k = 'move-node-to-workspace up'
-alt-shift-l = 'move-node-to-workspace right'
+# 4. Move Windows
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
 
-# 4. Workspace Switching
+# 5. Workspace Switching
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 
-# 5. Move Window to Workspace
+# 6. Move Window to Workspace
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 
-# 6. Layout Modifiers
+# 7. Layout Modifiers
 alt-f = 'fullscreen'
-alt-slash = 'layout tiles horizontal vertical'
+alt-s = 'layout tiles horizontal vertical' # s for split
+
+# 8. Resize mode (r for resize)
+alt-r = 'mode resize'
+
+[mode.resize.binding]
+h = 'resize width -10'
+j = 'resize height +10'
+k = 'resize height -10'
+l = 'resize width +10'
+esc = 'mode main'

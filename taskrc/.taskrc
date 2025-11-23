@@ -1,0 +1,47 @@
+#config
+# Gruvbox Dark Theme for Taskwarrior-TUI
+
+# General colors
+color.active=color247 on color235   # Foreground on Background
+color.header=color172 on color235   # Yellow on Background
+color.footnote=color100 on color235 # Green on Background
+color.warning=color160 on color235  # Red on Background
+
+# Task states
+color.completed=color72             # Aqua for completed tasks
+color.deleted=color235 on color160  # Background on Red for deleted tasks
+color.overdue=color160              # Red for overdue tasks
+color.due=color172                  # Yellow for tasks due soon
+color.scheduled=color66             # Blue for scheduled tasks
+color.recurring=color132            # Purple for recurring tasks
+
+# Priority colors
+color.pri.H=color160                # High priority: Red
+color.pri.M=color172                # Medium priority: Yellow
+color.pri.L=color66                 # Low priority: Blue
+color.pri.none=color247             # No priority: Foreground
+
+# Tags
+color.tag.none=color247             # No tags: Foreground
+# Example for a specific tag (uncomment and modify as needed)
+# color.tag.work=color100
+
+# Projects
+color.project.none=color247         # No project: Foreground
+# Example for a specific project (uncomment and modify as needed)
+# color.project.Home=color66
+
+# Urgency (if you use urgency-based coloring)
+color.urgency.high=color160
+color.urgency.medium=color172
+color.urgency.low=color66
+
+# Other elements
+color.summary.bar=color100          # Green for summary bar
+color.edit=color247 on color235     # Edit mode: Foreground on Background
+color.filter=color172               # Filter text: Yellow
+
+uda.taskwarrior-tui.selection.indicator=→
+uda.taskwarrior-tui.task-report.next.filter=status:pending
+report.next.sort=urgency-
+news.version=3.4.2

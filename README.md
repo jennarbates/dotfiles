@@ -59,7 +59,6 @@ Download all the required tools in one go:
 
 ```bash
 brew install neovim ripgrep lazygit yazi aerc elinks zellij ffmpeg sevenzip jq poppler fd fzf zoxide imagemagick fastfetch bat eza stow gh
-brew install --cask ghostty nikitabobko/tap/aerospace
 brew install --cask ghostty nikitabobko/tap/aerospace qutebrowser
 ```
 
@@ -87,11 +86,15 @@ stow ghostty aerospace nvim yazi starship zsh aerc elinks qutebrowser zellij```
 | Key Combo | Action |
 | :--- | :--- |
 | `Alt + Enter` | **Spawn new Terminal** |
+| `Alt + d` | Close Window |
 | `Alt + h/j/k/l` | Focus Left / Down / Up / Right |
 | `Alt + Shift + h/j/k/l` | Move Window Left / Down / Up / Right |
+| `Alt + 1-4` | Switch to Workspace 1-4 |
+| `Alt + Shift + 1-2` | Move Window to Workspace 1-2 |
 | `Alt + f` | Toggle Fullscreen |
-| `Alt + /` | Rotate Split (Vertical/Horizontal) |
-| `Alt + Shift + 1-4` | Move Window to Workspace 1-4 |
+| `Alt + s` | Toggle Split (Vertical/Horizontal) |
+| `Alt + r` | **Enter Resize Mode** |
+| *In Resize Mode:* `h/j/k/l` | Resize Window |
 
 ### 📂 Yazi (File Manager)
 *Launch with command: `y`*
