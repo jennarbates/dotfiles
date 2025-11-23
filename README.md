@@ -1,19 +1,12 @@
-<div align="center">
-
 # 📟 THE MAINFRAME DOTFILES
 
-![Badge](https://img.shields.io/badge/OS-macOS-white?style=for-the-badge&logo=apple&logoColor=black)
-![Badge](https://img.shields.io/badge/Style-Retro_Industrial-fabd2f?style=for-the-badge)
-![Badge](https://img.shields.io/badge/Theme-Gruvbox_Hard-d65d0e?style=for-the-badge)
-![Badge](https://img.shields.io/badge/Font-IBM_3270-928374?style=for-the-badge)
+OS: macOS | Style: Retro_Industrial | Theme: Gruvbox_Hard | Font: IBM_3270
 
 **A keyboard-driven, GPU-accelerated development environment for macOS.**
 <br>
 *High contrast. No mouse required. 1980s aesthetics with 2025 speed.*
 
 [View the Code](https://github.com/jennarbates/dotfiles) · [Report Bug](https://github.com/jennarbates/dotfiles/issues)
-
-</div>
 
 ---
 
@@ -169,8 +162,4 @@ magick -size 3840x2160 xc:'#1d2021' -attenuate 0.05 +noise Gaussian ~/.config/gr
 
 ---
 
-<div align="center">
-
 *Built with ❤️ and `h j k l`.*
-
-</div>
