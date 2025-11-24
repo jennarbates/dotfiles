@@ -38,7 +38,9 @@ return {
         -- Typst (tinymist) settings from both files
         tinymist = {
           single_file_support = true,
-          root_dir = function() return vim.fn.getcwd() end,
+          root_dir = function()
+            return vim.fn.getcwd()
+          end,
           settings = {
             exportPdf = "onType",
             outputPath = "$root/target/$name",
@@ -59,43 +61,44 @@ return {
   },
 
   -- Custom command for Tinymist preview
-  {
-    "neovim/nvim-lspconfig",
-    event = "LspAttach",
-    config = function()
-      vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("user_lsp_attach_tinymist", { clear = true }),
-        callback = function(args)
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if client and client.name == "tinymist" then
-            local bufnr = args.buf
-            vim.api.nvim_buf_create_user_command(bufnr, "TypstPreview", function()
-              vim.lsp.buf.execute_command({
-                command = "tinymist.do",
-                arguments = {
-                  "preview.start",
-                  { task = { { kind = "preview", target = "html" } } },
-                },
-              })
-            end, { desc = "Start Tinymist Preview" })
-            vim.notify("Tinymist Attached. Run :TypstPreview", vim.log.levels.INFO, { title = "LSP" })
-          end
-        end,
-      })
-    end,
-  },
-  
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   event = "LspAttach",
+  --   config = function()
+  --     vim.api.nvim_create_autocmd("LspAttach", {
+  --       group = vim.api.nvim_create_augroup("user_lsp_attach_tinymist", { clear = true }),
+  --       callback = function(args)
+  --         local client = vim.lsp.get_client_by_id(args.data.client_id)
+  --         if client and client.name == "tinymist" then
+  --           local bufnr = args.buf
+  --           vim.api.nvim_buf_create_user_command(bufnr, "TypstPreview", function()
+  --             vim.lsp.buf.execute_command({
+  --               command = "tinymist.do",
+  --               arguments = {
+  --                 "preview.start",
+  --                 { task = { { kind = "preview", target = "html" } } },
+  --               },
+  --             })
+  --           end, { desc = "Start Tinymist Preview" })
+  --           vim.notify("Tinymist Attached. Run :TypstPreview", vim.log.levels.INFO, { title = "LSP" })
+  --         end
+  --       end,
+  --     })
+  --   end,
+  -- },
+
   -- Typst Previewer Plugin
   {
     "chomosuke/typst-preview.nvim",
     lazy = false,
     version = "1.*",
-    build = function()
-      require("typst-preview").update()
-    end,
-    opts = {
-      invert_colors = "never",
-      open_cmd = "open -a Firefox $(echo %s)",
-    },
+    -- build = function()
+    --   require("typst-preview").update()
+    -- end,
+    opts = {},
+    -- opts = {
+    --   invert_colors = "never",
+    --   open_cmd = "open -a Firefox $(echo %s)",
+    -- },
   },
 }
