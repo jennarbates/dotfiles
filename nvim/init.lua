@@ -908,20 +908,19 @@ require("lazy").setup({
 		-- change the command in the config to whatever the name of that colorscheme is.
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+	},
+	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		config = function()
-			vim.g.gruvbox_contrast = "hard"
-			---@diagnostic disable-next-line: missing-fields
-			require("gruvbox").setup({
-				italic = { comments = false }, -- Disable italics in comments
-			})
-
-			-- Load the colorscheme here.
-			-- Like many other themes, this one has different styles, and you could load
-			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', 'tokyonight-day'.
+		priority = 1000, -- make sure to load this before all the other start plugins
+		opts = {
+			contrast = "hard",
+			transparent_mode = false,
+		},
+		-- Kickstart requires a config function to actually apply the theme
+		config = function(_, opts)
+			require("gruvbox").setup(opts)
 			vim.o.background = "dark"
-			vim.cmd([[colorscheme gruvbox]])
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 
